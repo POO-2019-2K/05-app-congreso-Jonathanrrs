@@ -1,8 +1,59 @@
 .jumbotron {
-    background-color: rgb(109, 36, 31);
+    background-color: black;
     color: white;
     text-align: center;
     height: 100px;
-    padding: 3%;
+    padding: 4%;
   }
+#titulo {
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5cm;
+  color: darkcyan;
+  
+}
+#box {
+  background-color: rgb(37, 31, 31);
+  color: white;
+  border-radius: 19px;
+  left: 4px;
+ 
+  
+  
+  
+}
+#sub{
+  text-align: center;
+}
+
+#box input[type = "text"], #box input[type = "number"], #box input[type = "date"] {
+  border: 0;
+  background: none;
+  display: block;
+  border: 2px solid #3498db;
+  padding: 23px 10px;
+  outline: none;
+  border-radius: 17px;
+  transition: 0.25s;
+  color: white;
+}
+#box input[type = "text"]:focus, #box input[type = "number"]:focus, #box input[type = "date"]:focus {
+  border-color: #cc2e55;
+ 
+ 
+}
+#btnTalleres {
+  border-radius: 15px;
+  margin: 4px auto;
+  
+  
+  
+  
+}
+
+
+
+
+
+
 
