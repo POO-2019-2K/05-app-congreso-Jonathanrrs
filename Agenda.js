@@ -15,7 +15,7 @@ export default class Agenda {
         talleres.forEach((taller, index) => {
             taller.fechaInicio = new Date(taller.fechaInicio);
             taller.fechaTermino = new Date(taller.fechaTermino);
-            this._showInTable(new taller(taller));
+            this._showInTable(new Taller(taller));
         });
     }
     
@@ -28,7 +28,7 @@ export default class Agenda {
         let cellLugaresDis = row.insertCell(3);
         let cellDuracion = row.insertCell(4);
 
-        cellNomTaller.innerHTML = taller.cellNomTaller;
+        cellNomTaller.innerHTML = taller.nomTaller;
         cellFechaInicio.innerHTML = taller.getFechaInicio();
         cellFechaTermino.innerHTML = taller.getFechaTermino();
         cellLugaresDis.innerHTML = taller.lugaresDis;
@@ -42,7 +42,10 @@ export default class Agenda {
             duracion: taller.duracion
         }
         this._talleres.push(objTaller);
-
-
     }
+    addTaller(taller) {
+        this._showInTable(taller);
+        localStorage.setItem("talleres", JSON.stringify(this._talleres));
+    }
+
 }
