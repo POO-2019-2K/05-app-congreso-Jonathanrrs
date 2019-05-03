@@ -2,14 +2,15 @@
     background-color: black;
     color: white;
     text-align: center;
-    height: 100px;
+    height: 150px;
     padding: 4%;
   }
 #titulo {
-  font-family: 'Permanent Marker', cursive;
-  font-family: 'Pacifico', cursive;
+  font-family: 'Cormorant Unicase', serif;
   font-size: 1.5cm;
-  color: darkcyan;
+  color: rgb(101, 183, 231);
+  letter-spacing: 18px;
+  
   
 }
 #box {
@@ -17,16 +18,13 @@
   color: white;
   border-radius: 19px;
   left: 4px;
- 
-  
-  
   
 }
 #sub{
   text-align: center;
 }
 
-#box input[type = "text"], #box input[type = "number"], #box input[type = "date"] {
+#box input[type = "text"], #box input[type = "number"], #box input[type = "date"], #box input[type = "email"] {
   border: 0;
   background: none;
   display: block;
@@ -37,7 +35,7 @@
   transition: 0.25s;
   color: white;
 }
-#box input[type = "text"]:focus, #box input[type = "number"]:focus, #box input[type = "date"]:focus {
+#box input[type = "text"]:focus, #box input[type = "number"]:focus, #box input[type = "date"]:focus, #box input[type = "email"]:focus {
   border-color: #cc2e55;
  
  
@@ -45,10 +43,16 @@
 #btnTalleres {
   border-radius: 15px;
   margin: 4px auto;
-  
-  
-  
-  
+
+}
+.carousel-item {
+  transition: 0s;
+
+}
+.carousel-indicators{
+  background-color: black;
+  width: 80px;
+  left: 500px;
 }
 
 
