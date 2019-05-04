@@ -1,63 +1,63 @@
 .jumbotron {
-    background-color: black;
-    color: white;
-    text-align: center;
-    height: 150px;
-    padding: 4%;
-  }
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 150px;
+  padding: 4%;
+}
 #titulo {
-  font-family: 'Cormorant Unicase', serif;
-  font-size: 1.5cm;
-  color: rgb(101, 183, 231);
-  letter-spacing: 18px;
-  
-  
+font-family: 'Cormorant Unicase', serif;
+font-size: 1.5cm;
+color: rgb(101, 183, 231);
+letter-spacing: 18px;
+
+
 }
 #box {
-  background-color: rgb(37, 31, 31);
-  color: white;
-  border-radius: 19px;
-  left: 4px;
-  
+background-color: rgb(37, 31, 31);
+color: white;
+border-radius: 19px;
+left: 4px;
+
 }
 #sub{
-  text-align: center;
+text-align: center;
 }
 
 #box input[type = "text"], #box input[type = "number"], #box input[type = "date"], #box input[type = "email"] {
-  border: 0;
-  background: none;
-  display: block;
-  border: 2px solid #3498db;
-  padding: 23px 10px;
-  outline: none;
-  border-radius: 17px;
-  transition: 0.25s;
-  color: white;
+border: 0;
+background: none;
+display: block;
+border: 2px solid #3498db;
+padding: 23px 10px;
+outline: none;
+border-radius: 17px;
+transition: 0.25s;
+color: white;
 }
 #box input[type = "text"]:focus, #box input[type = "number"]:focus, #box input[type = "date"]:focus, #box input[type = "email"]:focus {
-  border-color: #cc2e55;
- 
- 
+border-color: #cc2e55;
+
+
 }
 #btnTalleres {
-  border-radius: 15px;
-  margin: 4px auto;
+border-radius: 15px;
+margin: 4px auto;
+
+}
+#btnParticipante {
+border-radius: 15px;
+margin: 4px auto;
 
 }
 .carousel-item {
-  transition: 0s;
+transition: 0s;
 
 }
-.carousel-indicators{
-  background-color: black;
-  width: 80px;
-  left: 500px;
+
+.carousel-indicators li {
+background-color: black;
+width: 80px;
+left: 500px;  
+
 }
-
-
-
-
-
-
-
