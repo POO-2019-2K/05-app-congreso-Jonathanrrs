@@ -1,8 +1,8 @@
-export  default class Taller {
+export default class Taller {
     constructor(taller) {
         this._nomTaller = taller.nomTaller;
-        this._fechaInicio = new Date(taller.fechaInicio);
-        this._fechaTermino = new Date(taller.fechaTermino);
+        this._fechaInicio = taller.fechaInicio;
+        this._fechaTermino = taller.fechaTermino;
         this._lugaresDis = taller.lugaresDis;
         this._duracion = taller.duracion;
         this._meses = [
@@ -38,25 +38,25 @@ export  default class Taller {
     }
 
     getFechaInicio() {
-        let date =
+        let fecha =
           this._fechaInicio.getDate() +
           "/" +
           this._meses[this._fechaInicio.getMonth()] +
           "/" +
           this._fechaInicio.getFullYear();
     
-        return date;
+        return fecha;
     }
 
     getFechaTermino() {
-        let date =
+        let fecha =
           this._fechaTermino.getDate() +
           "/" +
           this._meses[this._fechaTermino.getMonth()] +
           "/" +
           this._fechaTermino.getFullYear();
     
-        return date;
+        return fecha;
     }
 
 }
