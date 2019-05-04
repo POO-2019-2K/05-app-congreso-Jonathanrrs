@@ -16,195 +16,184 @@
   </head>
   <body>
     <div class="jumbotron">
-      <h1 id="titulo">Registro de talleres</h1>
+        <h1 id="titulo">Registro de talleres</h1>
     </div>
-    <div class="bd-example">
-        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container-fluid">
-                    <div class="row">
-                      <!-- Formulario -->
-                      <div id="box" class="col-md-4 mb-5">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container-fluid">
+                <div class="row">
+                <!-- Formulario -->
+                    <div id="box" class="col-md-4 mb-5">
                         <div class="row">
-                          <form id="form" class="col-12 needs-validation" novalidate>
-                              <h2 id="sub"
-                              >Registrar taller</h2>
-                            <div class="form-group">
-                              <label for="nomTaller">Nombre del taller</label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                id="nomTaller"
-                                placeholder="Avengers"
-                                required
-                              />
-                              <div class="valid-feedback">Correcto!</div>
-                              <div class="invalid-feedback">Este campo es obligatorio</div>
+                            <form id="form" class="col-12 needs-validation" novalidate>
+                                <h2 id="sub"
+                                >Registrar talleer</h2>
+                                <div class="form-group">
+                                  <label for="nomTaller">Nombre del taller</label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="nomTaller"
+                                    placeholder="Avengers"
+                                    required
+                                  />
+                                  <div class="valid-feedback">Correcto!</div>
+                                  <div class="invalid-feedback">Este campo es obligatorio</div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="fechaInicio">Fecha de inicio</label>
+                                  <input
+                                    type="date"
+                                    class="form-control"
+                                    id="fechaInicio"
+                                    required
+                                  />
+                                  <div class="valid-feedback">Correcto!</div>
+                                  <div class="invalid-feedback">
+                                    Introduzca una fecha válida
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="fechaTermino">Fecha de término</label>
+                                  <input 
+                                    type="date" 
+                                    class="form-control" 
+                                    id="fechaTermino"
+                                    required
+                                  />
+                                  <div class="valid-feedback">Correcto!</div>
+                                  <div class="invalid-feedback">Introduzca una fecha válida</div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="lugaresDis">Lugares disponibles</label>
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    id="lugaresDis"
+                                    placeholder="20"
+                                    required
+                                  />
+                                  <div class="valid-feedback">Correcto!</div>
+                                  <div class="invalid-feedback">Este campo es obligatorio</div>
+                                </div>
+                                  <div class="form-group">
+                                  <label for="duracion">Duración</label>
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    id="duracion"
+                                    placeholder="Horas"
+                                     required
+                                  />
+                                  <div class="valid-feedback">Correcto!</div>
+                                  <div class="invalid-feedback">Este campo es obligatorio</div>
+                                 </div>
+                                <button id="btnTalleres" type="button" class="btn btn-danger btn-block">
+                                  Registrar
+                                </button>
+                              </form>
                             </div>
-                            <div class="form-group">
-                              <label for="fechaInicio">Fecha de inicio</label>
-                              <input
-                                type="date"
-                                class="form-control"
-                                id="fechaInicio"
-                                required
-                              />
-                              <div class="valid-feedback">Correcto!</div>
-                              <div class="invalid-feedback">
-                                Introduzca una fecha válida
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="fechaTermino">Fecha de término</label>
-                              <input 
-                                type="date" 
-                                class="form-control" 
-                                id="fechaTermino"
-                                required
-                              />
-                              <div class="valid-feedback">Correcto!</div>
-                              <div class="invalid-feedback">Introduzca una fecha válida</div>
-                            </div>
-                            <div class="form-group">
-                              <label for="lugaresDis">Lugares disponibles</label>
-                              <input
-                                type="number"
-                                class="form-control"
-                                id="lugaresDis"
-                                placeholder="20"
-                                required
-                              />
-                              <div class="valid-feedback">Correcto!</div>
-                              <div class="invalid-feedback">Este campo es obligatorio</div>
-                            </div>
-                              <div class="form-group">
-                              <label for="duracion">Duración</label>
-                              <input
-                                type="number"
-                                class="form-control"
-                                id="duracion"
-                                placeholder="Horas"
-                                 required
-                              />
-                              <div class="valid-feedback">Correcto!</div>
-                              <div class="invalid-feedback">Este campo es obligatorio</div>
-                             </div>
-                            <button id="btnTalleres" type="button" class="btn btn-danger btn-block">
-                              Registrar
-                            </button>
-                          </form>
+                          </div>
+                          <!-- Tabla -->
+                          <div class="col-md-8">
+                            <table id="agendaTaller" class="table">
+                              <thead class="thead-dark">
+                                <tr>
+                                  <th>Nombre del taller</th>
+                                  <th>Fecha de inicio</th>
+                                  <th>Fecha de término</th>
+                                  <th>Lugares Disponibes</th>
+                                  <th>Duración</th>
+                                </tr>
+                              </thead>
+                              <tbody></tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <!-- Row -->
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- Formulario -->
+                <div id="box" class="col-md-4 mb-5">
+                  <div class="row">
+                    <form id="form2" class="col-12 needs-validation" novalidate>
+                        <h2 id="sub"
+                        >Registrar taller</h2>
+                      <div class="form-group">
+                        <label for="nomParticipante">Nombre del taller</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="nomParticipante"
+                          placeholder="Juan"
+                          required
+                        />
+                        <div class="valid-feedback">Correcto!</div>
+                        <div class="invalid-feedback">Este campo es obligatorio</div>
+                      </div>
+                      <div class="form-group">
+                        <label for="correo">Correo</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="correo"
+                          placeholder="jonathan@gmail.com"
+                          required
+                        />
+                        <div class="valid-feedback">Correcto!</div>
+                        <div class="invalid-feedback">
+                          Este campo es obligatorio
                         </div>
                       </div>
-                      <!-- Tabla -->
-                      <div class="col-md-8">
-                        <table id="agendaTaller" class="table">
-                          <thead class="thead-dark">
-                            <tr>
-                              <th>Nombre del taller</th>
-                              <th>Fecha de inicio</th>
-                              <th>Fecha de término</th>
-                              <th>Lugares Disponibes</th>
-                              <th>Duración</th>
-                            </tr>
-                          </thead>
-                          <tbody></tbody>
-                        </table>
+                      <div class="form-group">
+                        <label for="fechaNac">Fecha de Nacimiento</label>
+                        <input 
+                          type="date" 
+                          class="form-control" 
+                          id="fechaNac"
+                          required
+                        />
+                        <div class="valid-feedback">Correcto!</div>
+                        <div class="invalid-feedback">Introduzca una fecha válida</div>
                       </div>
-                    </div>
-              
-                    <!-- Row -->
+                      <button id="btnParticipante" type="button" class="btn btn-danger btn-block">
+                        Registrar
+                      </button>
+                    </form>
                   </div>
-                  <!-- Container -->
+                </div>
+                <!-- Tabla -->
+                <div class="col-md-8">
+                  <table id="agendaPar" class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>Nombre del participante</th>
+                        <th>Correo</th>
+                        <th>Fecha de nacimiento</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+        
+              <!-- Row -->
             </div>
-            <!--Participantes-->
-            <div class="carousel-item">
-                <div class="container-fluid">
-                    <div class="row">
-                      <!-- Formulario -->
-                      <div id="box" class="col-md-4 mb-5">
-                        <div class="row">
-                          <form id="form" class="col-12 needs-validation" novalidate>
-                              <h2 id="sub"
-                              >Registrar participante</h2>
-                            <div class="form-group">
-                              <label for="nomParticipante">Nombre del taller</label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                id="nomParticipante"
-                                placeholder="Jonathan"
-                                required
-                              />
-                              <div class="valid-feedback">Correcto!</div>
-                              <div class="invalid-feedback">Este campo es obligatorio</div>
-                            </div>
-                            <div class="form-group">
-                                <label for="correo">Correo</label>
-                                <input
-                                  type="email"
-                                  class="form-control"
-                                  id="correo"
-                                  placeholder="Jonathan@gmail.com"
-                                  required
-                                />
-                                <div class="valid-feedback">Correcto!</div>
-                                <div class="invalid-feedback">Este campo es obligatorio</div>
-                              </div>
-                            <div class="form-group">
-                              <label for="fechaNac">Fecha de Nacimiento</label>
-                              <input
-                                type="date"
-                                class="form-control"
-                                id="fechaNac"
-                                required
-                              />
-                              <div class="valid-feedback">Correcto!</div>
-                              <div class="invalid-feedback">
-                                Introduzca una fecha válida
-                              </div>
-                            </div>
-                            <button id="btnParticipante" type="button" class="btn btn-danger btn-block">
-                              Registrar
-                            </button>
-                          </form>
-                        </div>
-                      </div>
-                      <!-- Tabla -->
-                      <div class="col-md-8">
-                        <table id="agendaTaller" class="table">
-                          <thead class="thead-dark">
-                            <tr>
-                              <th>Nombre del taller</th>
-                              <th>Fecha de inicio</th>
-                              <th>Fecha de término</th>
-                              <th>Lugares Disponibes</th>
-                              <th>Duración</th>
-                            </tr>
-                          </thead>
-                          <tbody></tbody>
-                        </table>
-                      </div>
-                    </div>
-              
-                    <!-- Row -->
-                  </div>
-                  <!-- Container -->
-            </div>
-            </div>
-            <div class="carousel-item">
-              <img src="si.png" class="d-block w-100" alt="...">
-            </div>
+          </div>
+          <div class="carousel-item">
+            
           </div>
         </div>
       </div>
-    
-
     <script src="./main.js" type="module"></script>
 
     <script
