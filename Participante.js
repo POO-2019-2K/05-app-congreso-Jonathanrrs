@@ -1,7 +1,7 @@
-export default class Taller {
-    constructor(taller) {
+export default class Participante {
+    constructor(participante) {
         this._nomParticipante = participante.nomParticipante;
-        this._correo = participantel.correo;
+        this._correo = participante.correo;
         this._fechaNac = participante.fechaNac;
         this._meses = [
             "Ene",
