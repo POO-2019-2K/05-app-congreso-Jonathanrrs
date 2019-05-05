@@ -1,6 +1,9 @@
 import Agenda from "./Agenda.js";
 import Taller from "./Taller.js";
 
+import AgendaPar from "./AgendaPar.js";
+import Participante from "./Participante.js";
+
 class Main {
     constructor() {
         let agendaTaller = new Agenda(document.querySelector("#agendaTaller"));
@@ -36,3 +39,33 @@ class Main {
 }
 
 let m = new Main()
+// Formulario 2
+class Main2 {
+    constructor() {
+        let agendaPar = new AgendaPar(document.querySelector("#agendaPar"));
+
+        document.querySelector("#btnParticipante").addEventListener("click", () => {
+            let form = document.querySelector("#form2");
+            form.classList.add("was-validated");
+
+            if(form.checkValidity() === true) {
+                let nomParticipante = document.querySelector("#nomParticipante").value;
+                let correo = document.querySelector("#correo").value;
+                let sFechaNac = document.querySelector("#fechaNac").value;
+                sFechaNac = sFechaNac.split("-");
+                let fechaNac = new Date(sFechaNac[0], sFechaNac[1]-1, sFechaNac[2]);
+
+                let objParticipante = {
+                    nomParticipante: nomParticipante,
+                    correo: correo,
+                    fechaNac: fechaNac
+                }
+
+                let participante = new Participante(objParticipante);
+                agendaPar.addParticipante(participante);
+            }
+        });
+    }
+}
+
+let m2 = new Main2()
