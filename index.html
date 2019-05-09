@@ -33,7 +33,7 @@
                         <div class="row">
                             <form id="form" class="col-12 needs-validation" novalidate>
                                 <h2 id="sub"
-                                >Registrar talleer</h2>
+                                >Registrar taller</h2>
                                 <div class="form-group">
                                   <label for="nomTaller">Nombre del taller</label>
                                   <input
@@ -76,7 +76,7 @@
                                     type="number"
                                     class="form-control"
                                     id="lugaresDis"
-                                    placeholder="20"
+                                    placeholder="Ejem. 20"
                                     required
                                   />
                                   <div class="valid-feedback">Correcto!</div>
@@ -127,9 +127,9 @@
                   <div class="row">
                     <form id="form2" class="col-12 needs-validation" novalidate>
                         <h2 id="sub"
-                        >Registrar taller</h2>
+                        >Registrar participante</h2>
                       <div class="form-group">
-                        <label for="nomParticipante">Nombre del taller</label>
+                        <label for="nomParticipante">Nombre del participante</label>
                         <input
                           type="text"
                           class="form-control"
@@ -165,6 +165,12 @@
                         <div class="valid-feedback">Correcto!</div>
                         <div class="invalid-feedback">Introduzca una fecha válida</div>
                       </div>
+                      <div>
+                        <label id="talleresSel">Seleccionar Talleres</label>
+                        <select id="talleres">
+                          <option>Talleres</option>
+                        </select>
+                      </div>
                       <button id="btnParticipante" type="button" class="btn btn-danger btn-block">
                         Registrar
                       </button>
@@ -184,8 +190,9 @@
                     <tbody></tbody>
                   </table>
                 </div>
+                <p id="plox"></p>
               </div>
-        
+
               <!-- Row -->
             </div>
           </div>
