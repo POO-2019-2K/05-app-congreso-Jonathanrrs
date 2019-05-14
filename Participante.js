@@ -17,6 +17,7 @@ export default class Participante {
             "Nov",
             "Dic"
         ];
+        this._tallerAsignado = participante.tallerAsignado;
     }
 
     get nomParticipante() {
@@ -27,6 +28,9 @@ export default class Participante {
     }
     get fechaNac() {
         return this._fechaNac;
+    }
+    get tallerAsignado(){
+        return this._tallerAsignado;
     }
   
 
