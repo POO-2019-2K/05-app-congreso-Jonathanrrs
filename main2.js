@@ -1,0 +1,66 @@
+import AgendaPar from "./AgendaPar.js";
+import Participante from "./Participante.js";
+
+// Formulario 2
+class Main2 {
+    constructor() {
+        let agendaPar = new AgendaPar(document.querySelector("#agendaPar"));
+
+        document.querySelector("#btnParticipante").addEventListener("click", () => {
+            let form = document.querySelector("#form2");
+            form.classList.add("was-validated");
+
+            if (form.checkValidity() === true) {
+                let nomParticipante = document.querySelector("#nomParticipante").value;
+                let correo = document.querySelector("#correo").value;
+                let sFechaNac = document.querySelector("#fechaNac").value;
+                sFechaNac = sFechaNac.split("-");
+                let fechaNac = new Date(sFechaNac[0], sFechaNac[1] - 1, sFechaNac[2]);
+                let tallerAsignado = $("#listaTaller option:selected").text();
+
+                let objParticipante = {
+                    nomParticipante: nomParticipante,
+                    correo: correo,
+                    fechaNac: fechaNac,
+                    tallerAsignado: tallerAsignado
+                }
+
+                let participante = new Participante(objParticipante);
+                agendaPar.addParticipante(participante);
+
+            }
+        });
+        //ver los cursos
+        $(document).ready(function () {
+            let talleres = JSON.parse(localStorage.getItem("talleres"));
+            var noTalleres = "";
+
+            if (talleres === null) {
+                console.log("no hay talleres")
+                document.getElementById("listaTaller").innerHTML = noTalleres;
+                return;
+            }
+            var opciones = ""
+
+            talleres.forEach((taller) => {
+
+                opciones += "<option>" + taller.nomTaller + "</option>";
+                console.log("talleres disponibles")
+                console.log(taller.nomTaller);
+
+
+            });
+            document.getElementById("listaTaller").innerHTML = opciones;
+
+        });
+
+        $('select#listaTaller').on('change', function () {
+            var valor = $(this).val();
+            document.getElementById("seleccionado").innerHTML = valor;
+        });
+
+    }
+
+}
+
+let m2 = new Main2()
