@@ -5,6 +5,7 @@ export default class AgendaPar {
         this._tablaAgendaPar = tablaAgendaPar;
         this._participantes = [];
         this._initTables();
+          //localStorage.removeItem("participantes");
         
        
     }
@@ -26,15 +27,18 @@ export default class AgendaPar {
         let cellNomParticipante = row.insertCell(0);
         let cellCorreo = row.insertCell(1);
         let cellFechaNac= row.insertCell(2);
+        let celltallerAsignado= row.insertCell(3);
 
         cellNomParticipante.innerHTML = participante.nomParticipante;
         cellCorreo.innerHTML = participante.correo;
         cellFechaNac.innerHTML = participante.getFechaNac();
+        celltallerAsignado.innerHTML = participante.tallerAsignado;
 
         let objParticipante = {
             nomParticipante: participante.nomParticipante,
             correo: participante.correo,
-            fechaNac: participante.fechaNac
+            fechaNac: participante.fechaNac,
+            tallerAsignado: participante.tallerAsignado
         }
         this._participantes.push(objParticipante);
     }
