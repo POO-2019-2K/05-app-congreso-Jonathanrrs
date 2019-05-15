@@ -59,6 +59,43 @@ class Main2 {
             document.getElementById("seleccionado").innerHTML = valor;
         });
 
+        $('.buttonEliminar').on('click', function () {
+            console.log(this.id)
+
+            let participantes = JSON.parse(localStorage.getItem("participantes"));
+            console.log(participantes)
+
+            let talleres = JSON.parse(localStorage.getItem("talleres"));
+            let tallerAsignado = $("#listaTaller option:selected").text();
+
+
+            participantes.forEach((p, i) => {
+                //const index = participantes.indexOf()
+                console.log("correo de participante")
+                console.log(p.correo)
+
+                if (this.id === p.correo) {
+
+                    participantes.splice(i, 1)
+                    localStorage.setItem("participantes", JSON.stringify(participantes))
+                    alert("Usuario eliminado Correctamente");
+                    talleres.forEach((t, i) => {
+
+                        if (tallerAsignado === t.nomTaller) {
+                            
+                                    //aqui le sumo uno al cupo del taller
+                                    talleres[i].lugaresDis = parseInt(t.lugaresDis) +1
+                                    localStorage.setItem("talleres", JSON.stringify(talleres));
+                                     console.log(talleres)
+                              
+
+                            }
+                        }) 
+                        location.reload() 
+            }
+            });
+        });
+
     }
 
 }
